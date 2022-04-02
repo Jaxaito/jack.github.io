@@ -1,0 +1,159 @@
+html {
+    font-size: 100%;
+}
+body {
+    background-color: black;
+    color: white;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+img {
+    max-width: 100%;
+}
+
+.contents {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    padding: 0 7%;
+    margin: 0 auto;
+    background-image: url(../img/shinaka_hedder.jpg);
+    background-position: center;
+    background-size: contain;
+}
+.contents::after {
+    content:"";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+}
+.sub-tit {
+    font-size: 3rem;
+    width: fit-content;
+    background: linear-gradient(transparent 10%,red 100%);
+}
+.flex {
+    display: flex;
+    position: relative;
+    z-index: 3;
+}
+#b .flex .image {
+    padding-left: 20px;
+}
+.flex .image {
+    width: 50%;
+}
+.flex .image img {
+    height: 100vh;
+    object-fit: contain;
+}
+.flex .text {
+    width: 50%;
+    padding: 70px 10px;
+}
+.flex .text p {
+    margin-top: 40px;
+    line-height: 1.6rem;
+}
+.flex .text p::first-letter {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.flex dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 57px;
+    padding-top: 20px;
+    border-top: 1px solid white;
+}
+.flex dt {
+    font-weight: 900;
+    width: 15%;
+    margin-bottom: 10px;
+}
+.flex dt:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+}
+.flex dd {
+    width: 80%;
+    font-weight: lighter;
+}
+#header {
+    max-width: 100%;
+    margin: 40px auto 40px auto;
+    padding: 0 7%;
+    font-family: 'Noto Serif JP', serif;
+    font-family: 'Share', cursive;
+    border-bottom: 1px solid white;
+}
+#header .header-a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+#header .header-a h1 {
+    width: 200px;
+    line-height: 0;
+    padding: px 12px;
+    margin-right: 20px;
+    background-color: red;
+}
+#header .header-a ul {
+    display: flex;
+}
+#header .header-a li {
+    margin-left: 12px;
+    font-size: 2rem;
+    background-color: black;
+}
+#header .header-a li:hover {
+    background-color: red;
+    transition: all 1s;
+}
+#footer {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.7rem;
+}
+@media screen and (max-width:767px){
+    .contents {
+        padding: 0 4%;
+    }
+    #header .header-a {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #header .header-a h1 {
+        margin: 0 auto;
+    }
+    #header .header-a nav {
+        margin: 0 auto;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    .flex .image {
+        width: 100%;
+    }
+    .flex .image img {
+        height: 100%;
+    }
+    .flex .text {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .flex .text dd {
+        padding-left: 20px;
+    }
+}
